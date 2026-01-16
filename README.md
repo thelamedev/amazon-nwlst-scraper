@@ -1,8 +1,8 @@
 # Amazon NWLST Scraper
 
-Scrape amazon URLs with parallel processing and Interstitial bypass.
+Scrape URLs with parallel processing and Interstitial bypass.
 
-> The program is still in development. As of now, it writes the output to a json file called `batch_results_v*.json`. This will change in future to support writing to other sinks like Excel files, database records, or Google Spreadsheets.
+> The program is still in development. As of now, it writes the output to a `sqlite databasea`. This will change in future to support writing to other sinks like Excel files, database records, or Google Spreadsheets.
 
 # Configuration
 
@@ -32,9 +32,15 @@ Edit the `config.json` file to configure the scraper.
   - If you don't want to use a proxy, set its `enabled` to `false`.
   - If you want to use a proxy, set its `enabled` to `true` and provide the `proxy_url` and `proxy_username` and `proxy_password`.
 
-# XPath Selectors
+- `layouts_path` is the path to the layouts directory.
 
-The program loads column names and xpath selectors from the `xpaths.json` file. If you want to add more columns, you can edit the `xpaths.json` file.
+- `db_path` is the path to the database file (SQLite).
+
+# Website Layouts
+
+The program loads the website layout from the `layouts` directory. Each layout must contain `name` and `domain`, `xpaths` and `css` fields. The `xpaths` and `css` fields are dictionaries of Column name and Paths to be used for scraping.
+
+> All paths are extracted in parallel, hence any duplicate column names may result in unexpected behaviour.
 
 # Requirements
 
@@ -70,7 +76,7 @@ uv run playwright install chromium
 # Usage
 
 ```sh
-uv run python version2.py
+uv run python -m src.scraper
 ```
 
 # License
