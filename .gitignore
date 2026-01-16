@@ -13,3 +13,7 @@ wheels/
 logs/
 logs*
 *.log
+
+# Custom paths
+*.sqlite3
+batch_results*.json
