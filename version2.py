@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Amazon NWLST → 600 URLs/min (10/sec) Playwright
-Fixes: @html, indexing, 34 XPaths, concurrency
+Amazon NWLST Playwright Datascraper
 """
 
 import json

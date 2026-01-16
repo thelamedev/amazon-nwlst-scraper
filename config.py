@@ -11,7 +11,7 @@ class Proxy(BaseModel):
 
 
 class Config(BaseSettings):
-    model_config = SettingsConfigDict(json_file="config.json", extra="allow")
+    model_config = SettingsConfigDict(json_file="config.json", extra="ignore")
 
     headless_mode: bool = Field(default=True, description="Run the scraper in headless mode")
     delay: float = Field(default=0.2, description="Delay between requests in milliseconds")
@@ -20,6 +20,9 @@ class Config(BaseSettings):
     retries: int = Field(default=3, description="Number of retries for failed requests")
     max_concurrent: int = Field(default=5, description="Maximum number of concurrent requests")
     batch_size: int = Field(default=10, description="Batch size for processing")
+
+    db_path: str = Field(default="db.sqlite3", description="Database path")
+    layouts_path: str = Field(default="layouts", description="Path to the layouts directory")
 
     user_agents: list[str] = Field(
         default=[
