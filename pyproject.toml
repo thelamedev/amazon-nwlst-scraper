@@ -6,14 +6,13 @@ readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "aiofiles>=25.1.0",
-    "aiosqlite>=0.22.1",
     "asyncio-throttle>=1.0.2",
     "beautifulsoup4>=4.14.3",
     "fastexcel>=0.18.0",
     "google-auth>=2.45.0",
     "google-auth-httplib2>=0.3.0",
     "google-auth-oauthlib>=1.2.2",
-    "gspread>=6.2.1",
+    "gspread-asyncio>=2.0.0",
     "httpx>=0.28.1",
     "lxml>=6.0.2",
     "oauth2client>=4.1.3",

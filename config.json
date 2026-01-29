@@ -3,7 +3,6 @@
   "max_concurrent": 10,
   "page_timeout_ms": 6000,
   "locator_timeout": 1000,
-  "db_path": "db.sqlite3",
   "delay": 0,
   "retries": 3,
   "user_agents": [
@@ -13,6 +12,6 @@
     "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/109.0",
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.1 Safari/605.1.15"
   ],
-  "input_file_path": "input-m1-amz-nwlst-general.xlsx",
-  "output_file_path": "output-m1-amz-nwlst-general.csv"
+  "service_account_path": "keys/zenreactor-c5bf4e9b37ab.json",
+  "spreadsheet_url": "https://docs.google.com/spreadsheets/d/1mywswsIYEOJ7y8esmhuZO5x0J_nGQmYnj2U4z1jww3o/edit?usp=sharing"
 }

@@ -17,3 +17,6 @@ logs*
 # Custom paths
 *.sqlite3
 batch_results*.json
+
+# Service Keys
+keys/*.json

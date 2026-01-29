@@ -31,8 +31,10 @@ class Config(BaseSettings):
         description="List of user agents to use for requests",
     )
 
-    input_file_path: str = Field(default="", description="Path to the input file")
-    output_file_path: str = Field(default="", description="Path to the output file")
+    # input_file_path: str = Field(default="", description="Path to the input file")
+    # output_file_path: str = Field(default="", description="Path to the output file")
+    spreadsheet_url: str = Field(default="", description="URL of the spreadsheet")
+    service_account_path: str = Field(default="", description="Path to the service account credentials")
 
     proxy: Proxy | None = Field(default=None, description="Proxy configuration")
 
